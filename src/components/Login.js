@@ -45,17 +45,20 @@ function Login() {
 
   return (
     <div>
-      {showLoading && 
-        <Spinner color="primary:" />
-      }
+      {showLoading && <Spinner color="primary" />}
       <Jumbotron>
         <Form onSubmit={login}>
           <FormGroup>
             <label>Nickname</label>
-            <input type="text" name="nickname" id="nickname">
-            </input>
+            <input type="text" name="nickname" id="nickname" placeholder = "Enter your nickname"></input>
           </FormGroup>
+          <button variant="primary" type="submit">
+            login
+          </button>
         </Form>
       </Jumbotron>
-    </div>);
+    </div>
+  );
 }
+
+export default Login;
